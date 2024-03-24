@@ -538,8 +538,11 @@ require('lazy').setup({
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        -- clangd = {},
-        -- gopls = {},
+        -- enable clangd, gopls and ruby_ls muquit@muquit.com
+        clangd = {},
+        gopls = {},
+        -- muquit@muquit.com
+        ruby_ls = {},
         -- pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -858,6 +861,9 @@ require('lazy').setup({
     },
   },
 })
+--load my personal settings
+-- muquit@muquit.com  Mar-24-2024
+require 'muquit.custom'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
