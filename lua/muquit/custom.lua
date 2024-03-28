@@ -11,15 +11,7 @@ vim.opt.autoindent = true
 vim.opt.shiftwidth = 4
 vim.opt.wrapmargin = 2
 vim.opt.textwidth = 78
--- do not copy delete to system clipboard
--- but yanks will be
-vim.keymap.set('n', 'd$', '"_d$')
-vim.keymap.set('n', 'dd', '"_dd')
-vim.keymap.set('n', 'dw', '"_dw')
-vim.keymap.set('n', 'x', '"_x')
 
--- vim.api.nvim_set_keymap('n', ';', ':', {})
-vim.opt.number = false
 -- map = to <C-F>
 vim.api.nvim_set_keymap('n', '=', '<C-F>', {})
 vim.api.nvim_set_keymap('v', '=', '<C-F>', {})
